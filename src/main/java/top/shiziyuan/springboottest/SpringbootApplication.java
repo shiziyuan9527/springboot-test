@@ -16,6 +16,11 @@ public class SpringbootApplication {
         MyConfig myConfig = run.getBean(MyConfig.class);
         System.out.println(myConfig);
 
+        boolean hasPet = run.containsBean("pet");
+        System.out.println("has pet: " + hasPet);
+        boolean hasUser = run.containsBean("user");
+        System.out.println("has user: " + hasUser);
+
 //        User user = run.getBean("user", User.class);
 //        Pet pet = run.getBean("pet", Pet.class);
 //        System.out.println(user.getPet() == pet);
