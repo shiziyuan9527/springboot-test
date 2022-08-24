@@ -1,8 +1,10 @@
 package top.shiziyuan.springboottest.domain;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@NoArgsConstructor
 public class Pet {
     private String name;
     private int age;

@@ -1,0 +1,23 @@
+person:
+  name: oliver
+  age: 25
+  friend-names:
+    - lyh
+    - 9527
+    - 9528
+  pet:
+    name: my-pet
+    age: 10
+  pets:
+    - { name: pet1,age: 5 }
+    - name: pet2
+      age: 6
+  pet-map:
+    key1:
+      - { name: mapName1,age: 1 }
+      - name: mapName2
+        age: 2
+    key2:
+      - { name: mapName3,age: 3 }
+      - name: mapName4
+        age: 4
