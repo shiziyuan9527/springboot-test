@@ -1,12 +1,15 @@
 package top.shiziyuan.springboottest.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import top.shiziyuan.springboottest.domain.Cat;
+import top.shiziyuan.springboottest.domain.Dog;
 import top.shiziyuan.springboottest.domain.Person;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/test")
@@ -14,7 +17,9 @@ public class TestController {
 
     @Resource
     private Cat cat;
-    // 只有有参构造器注入 ？？
+
+    @Resource
+    private Dog dog;
 
     @Resource
     private Person person;
@@ -24,8 +29,23 @@ public class TestController {
         return cat;
     }
 
+    @GetMapping("/dog")
+    public Dog getDog() {
+        return dog;
+    }
+
     @GetMapping("/person")
     public Person getPerson() {
         return person;
+    }
+
+    @GetMapping("/cat/{id}")
+    public Map<String, String> testParam(@PathVariable("id") String id,
+                                         @RequestHeader Map<String, String> headerMap,
+                                         HttpSession session,
+                                         HttpServletRequest request,
+                                         HttpServletResponse response) {
+        response.setHeader("test", "setHeader");
+        return headerMap;
     }
 }

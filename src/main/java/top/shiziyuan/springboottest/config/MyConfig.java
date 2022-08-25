@@ -4,10 +4,7 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import top.shiziyuan.springboottest.domain.Cat;
-import top.shiziyuan.springboottest.domain.Person;
-import top.shiziyuan.springboottest.domain.Pet;
-import top.shiziyuan.springboottest.domain.User;
+import top.shiziyuan.springboottest.domain.*;
 
 // proxyBeanMethods = false 不再是代理对象。意味着不做bean存在与否的检查，直接调用原始类的方法，会提升效率。
 @Configuration(proxyBeanMethods = true)
@@ -25,4 +22,8 @@ public class MyConfig {
         return new User("oliver", 25, pet());
     }
 
+    @Bean
+    public Dog dog() {
+        return new Dog("dog", 10);
+    }
 }
