@@ -4,12 +4,14 @@ import org.springframework.web.bind.annotation.*;
 import top.shiziyuan.springboottest.domain.Cat;
 import top.shiziyuan.springboottest.domain.Dog;
 import top.shiziyuan.springboottest.domain.Person;
+import top.shiziyuan.springboottest.service.TestService;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.util.Map;
+import java.util.Random;
 
 @RestController
 @RequestMapping("/test")
@@ -17,12 +19,12 @@ public class TestController {
 
     @Resource
     private Cat cat;
-
     @Resource
     private Dog dog;
-
     @Resource
     private Person person;
+    @Resource
+    private TestService testService;
 
     @GetMapping("/cat")
     public Cat getPet() {
@@ -47,5 +49,11 @@ public class TestController {
                                          HttpServletResponse response) {
         response.setHeader("test", "setHeader");
         return headerMap;
+    }
+
+    @GetMapping("/async")
+    public String testAsync() {
+        testService.asyncTask();
+        return String.valueOf(new Random().nextInt());
     }
 }
