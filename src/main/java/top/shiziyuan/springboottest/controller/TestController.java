@@ -4,6 +4,7 @@ import org.springframework.web.bind.annotation.*;
 import top.shiziyuan.springboottest.domain.Cat;
 import top.shiziyuan.springboottest.domain.Dog;
 import top.shiziyuan.springboottest.domain.Person;
+import top.shiziyuan.springboottest.service.RedisService;
 import top.shiziyuan.springboottest.service.TestService;
 
 import javax.annotation.Resource;
@@ -25,6 +26,8 @@ public class TestController {
     private Person person;
     @Resource
     private TestService testService;
+    @Resource
+    private RedisService redisService;
 
     @GetMapping("/cat")
     public Cat getPet() {
@@ -55,5 +58,10 @@ public class TestController {
     public String testAsync() {
         testService.asyncTask();
         return String.valueOf(new Random().nextInt());
+    }
+
+    @GetMapping("/redis")
+    public String testRedis(@RequestParam String text) {
+        return redisService.test(text);
     }
 }
