@@ -3,6 +3,7 @@ package top.shiziyuan.springboottest;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import top.shiziyuan.springboottest.config.MyConfig;
@@ -10,10 +11,11 @@ import top.shiziyuan.springboottest.config.MyConfig;
 @EnableAsync
 @EnableScheduling
 @SpringBootApplication
-public class SpringbootApplication {
+@PropertySource("file:D:\\git_workspace\\properties\\application.properties")
+public class Application {
 
     public static void main(String[] args) {
-        ConfigurableApplicationContext run = SpringApplication.run(SpringbootApplication.class, args);
+        ConfigurableApplicationContext run = SpringApplication.run(Application.class, args);
 
         MyConfig myConfig = run.getBean(MyConfig.class);
         System.out.println(myConfig);
