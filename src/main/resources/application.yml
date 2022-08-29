@@ -1,7 +1,7 @@
-spring:
-  web:
-    resources:
-      static-locations: [classpath:/tt]
+#spring:
+#  web:
+#    resources:
+#      static-locations: [classpath:/tt]
 
 person:
   name: oliver
