@@ -15,6 +15,7 @@ import java.util.Map;
 import java.util.Random;
 
 @RestController
+@CrossOrigin
 @RequestMapping("/test")
 public class TestController {
 

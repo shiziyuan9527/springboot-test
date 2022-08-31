@@ -10,7 +10,8 @@ public class TestService {
     public void asyncTask() {
         try {
             Thread.sleep(2000);
-        } catch (InterruptedException e) {
+        }
+        catch (InterruptedException e) {
             e.printStackTrace();
         }
         System.out.println("async task execute...");
