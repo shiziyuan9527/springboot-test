@@ -45,6 +45,11 @@ public class TestController {
         return person;
     }
 
+    @PostMapping("/person")
+    public Person getPerson1() {
+        return person;
+    }
+
     @GetMapping("/cat/{id}")
     public Map<String, String> testParam(@PathVariable("id") String id,
                                          @RequestHeader Map<String, String> headerMap,
