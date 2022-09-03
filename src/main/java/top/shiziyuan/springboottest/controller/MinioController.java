@@ -80,7 +80,7 @@ public class MinioController {
     }
 
     @PostMapping("/upload")
-    public String upload(@RequestParam(name = "file", required = false) MultipartFile[] files) {
+    public String upload(@RequestParam(name = "files", required = false) MultipartFile[] files) {
         if (files == null || files.length == 0) {
             return "fail, param warn.";
         }
