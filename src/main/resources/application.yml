@@ -3,6 +3,10 @@
 #    resources:
 #      static-locations: [classpath:/tt]
 
+spring:
+  application:
+    name: shiziyuan
+
 person:
   name: oliver
   age: 25
