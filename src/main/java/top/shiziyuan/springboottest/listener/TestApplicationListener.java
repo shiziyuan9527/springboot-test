@@ -9,6 +9,6 @@ public class TestApplicationListener implements ApplicationListener<ApplicationR
 
     @Override
     public void onApplicationEvent(ApplicationReadyEvent event) {
-        System.out.println("-------------应用程序启动了-------------");
+        System.out.println("-------------APPLICATION RUN-------------");
     }
 }

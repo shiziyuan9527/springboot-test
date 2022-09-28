@@ -6,7 +6,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.annotation.EnableScheduling;
-import top.shiziyuan.springboottest.config.MyConfig;
+import top.shiziyuan.springboottest.log.LogUtil;
 
 @EnableAsync
 @EnableScheduling
@@ -15,7 +15,8 @@ import top.shiziyuan.springboottest.config.MyConfig;
 public class Application {
 
     public static void main(String[] args) {
-        ConfigurableApplicationContext run = SpringApplication.run(Application.class, args);
+        SpringApplication.run(Application.class, args);
+//        ConfigurableApplicationContext run = SpringApplication.run(Application.class, args);
 //        MyConfig myConfig = run.getBean(MyConfig.class);
 //        System.out.println(myConfig);
 

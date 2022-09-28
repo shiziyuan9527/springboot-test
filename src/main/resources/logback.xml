@@ -1,0 +1,22 @@
+<configuration  xmlns="http://ch.qos.logback/xml/ns/logback"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:schemaLocation="http://ch.qos.logback/xml/ns/logback
+                https://raw.githubusercontent.com/enricopulatzo/logback-XSD/master/src/main/xsd/logback.xsd">
+
+    <appender name="myAppender" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d [%thread] %-5level %logger{36} %line - %msg%n</pattern>
+        </encoder>
+<!--        <filter class="top.shiziyuan.springboottest.log.KeywordLogFilter">-->
+<!--            <keyword>success</keyword> //日志中含有此关键词的日志被打印-->
+<!--        </filter>-->
+    </appender>
+
+    <root level="INFO"/>
+
+    <logger name="top.shiziyuan.springboottest" additivity="false">
+        <appender-ref ref="myAppender"/>
+    </logger>
+
+
+</configuration>
