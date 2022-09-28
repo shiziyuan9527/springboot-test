@@ -11,11 +11,15 @@
 <!--            <keyword>success</keyword> //日志中含有此关键词的日志被打印-->
 <!--        </filter>-->
     </appender>
+    
+    <appender name="asyncMyAppender" class="ch.qos.logback.classic.AsyncAppender">
+        <appender-ref ref="myAppender"/>
+    </appender>
 
     <root level="INFO"/>
 
     <logger name="top.shiziyuan.springboottest" additivity="false">
-        <appender-ref ref="myAppender"/>
+        <appender-ref ref="asyncMyAppender"/>
     </logger>
 
 

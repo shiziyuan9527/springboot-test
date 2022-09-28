@@ -16,6 +16,7 @@ public class Application {
 
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
+        LogUtil.info("app start...");
 //        ConfigurableApplicationContext run = SpringApplication.run(Application.class, args);
 //        MyConfig myConfig = run.getBean(MyConfig.class);
 //        System.out.println(myConfig);
