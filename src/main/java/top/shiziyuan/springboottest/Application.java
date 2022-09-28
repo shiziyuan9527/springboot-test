@@ -11,12 +11,11 @@ import top.shiziyuan.springboottest.config.MyConfig;
 @EnableAsync
 @EnableScheduling
 @SpringBootApplication
-@PropertySource("file:D:\\git_workspace\\properties\\application.properties")
+@PropertySource("file:/opt/metersphere/conf/application.properties")
 public class Application {
 
     public static void main(String[] args) {
         ConfigurableApplicationContext run = SpringApplication.run(Application.class, args);
-        System.out.println("-------------应用程序启动了------------");
 //        MyConfig myConfig = run.getBean(MyConfig.class);
 //        System.out.println(myConfig);
 
