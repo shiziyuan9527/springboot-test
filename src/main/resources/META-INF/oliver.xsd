@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.shiziyuan.top/schema/oliver"
+        xmlns:oliver="http://www.shiziyuan.top/schema/oliver"
+        elementFormDefault="qualified">
+
+    <element name="user">
+        <complexType>
+            <attribute name="id" type="string"/>
+            <attribute name="age" type="int"/>
+            <attribute name="name" type="string"/>
+        </complexType>
+    </element>
+
+</schema>

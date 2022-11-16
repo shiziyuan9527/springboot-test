@@ -7,7 +7,7 @@
         <encoder>
             <pattern>%d [%thread] %-5level %logger{36} %line - %msg%n</pattern>
         </encoder>
-<!--        <filter class="top.shiziyuan.springboottest.log.KeywordLogFilter">-->
+<!--        <filter class="top.shiziyuan.springboot.log.KeywordLogFilter">-->
 <!--            <keyword>success</keyword> //日志中含有此关键词的日志被打印-->
 <!--        </filter>-->
     </appender>
@@ -18,7 +18,7 @@
 
     <root level="INFO"/>
 
-    <logger name="top.shiziyuan.springboottest" additivity="false">
+    <logger name="top.shiziyuan.springboot" additivity="false">
         <appender-ref ref="asyncMyAppender"/>
     </logger>
 
