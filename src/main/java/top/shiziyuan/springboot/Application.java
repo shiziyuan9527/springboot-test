@@ -13,7 +13,7 @@ import top.shiziyuan.springboot.log.LogUtil;
 @EnableAsync
 @EnableScheduling
 @SpringBootApplication
-@PropertySource("file:/opt/metersphere/conf/application.properties")
+@PropertySource("file:E:/conf/application.properties")
 public class Application {
 
     public static void main(String[] args) {
