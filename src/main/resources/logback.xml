@@ -16,7 +16,9 @@
         <appender-ref ref="myAppender"/>
     </appender>
 
-    <root level="INFO"/>
+    <root level="INFO">
+        <appender-ref ref="asyncMyAppender"/>
+    </root>
 
     <logger name="top.shiziyuan.springboot" additivity="false">
         <appender-ref ref="asyncMyAppender"/>

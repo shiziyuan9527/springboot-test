@@ -20,10 +20,10 @@ public class Application {
         SpringApplication.run(Application.class, args);
         LogUtil.info("app start...");
 
-        ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
-        User user = (User) context.getBean("user");
-        System.out.println(user.getAge());
-        System.out.println(user.getName());
+//        ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+//        User user = (User) context.getBean("user");
+//        System.out.println(user.getAge());
+//        System.out.println(user.getName());
     }
 
 }

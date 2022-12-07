@@ -30,3 +30,5 @@ person:
       - { name: test,age: 3 }
       - name: mapName4
         age: 4
+server:
+  port: 8080
