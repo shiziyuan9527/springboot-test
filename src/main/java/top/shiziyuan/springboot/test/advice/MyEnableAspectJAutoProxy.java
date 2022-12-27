@@ -1,4 +1,4 @@
-package top.shiziyuan.springboot.testaop;
+package top.shiziyuan.springboot.test.advice;
 
 import org.springframework.context.annotation.Import;
 
@@ -7,8 +7,8 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-@Import(MyAop.class)
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
+@Import(MyAop.class)
 public @interface MyEnableAspectJAutoProxy {
 }

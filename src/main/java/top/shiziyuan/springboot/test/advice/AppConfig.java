@@ -1,10 +1,10 @@
-package top.shiziyuan.springboot.testaop;
+package top.shiziyuan.springboot.test.advice;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ComponentScan("top.shiziyuan.springboot.testaop")
+@ComponentScan("top.shiziyuan.springboot.test.advice")
 @MyEnableAspectJAutoProxy
 public class AppConfig {
 }
